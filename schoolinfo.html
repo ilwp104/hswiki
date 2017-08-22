@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+
+<body>
+
+
+  <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/hswiki.css">
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+  <header></header>
+
+  <section class="wrap-post">
+
+    <nav class="side-menu">
+      <article class="side-title">
+        <p>학교소개</p>
+      </article>
+      <article class="post-style">
+        <p onclick="focusclick(1)">학교장 인사말</p>
+        <p onclick="focusclick(2)">학교상징</p>
+        <p onclick="focusclick(3)">선생님 소개</p>
+        <p onclick="focusclick(4)">찾아오시는 길</p>
+      </article>
+    </nav>
+
+    <section id="post1" class="post">
+      <article class="post-title">
+        <p>학교장 인사말</p>
+      </article>
+      <article class="post-style">
+        <div class="contents">
+          <a>
+            <img src="./img/gyoteacher.png" alt="교장 선생님">
+            <p><strong>IT 전문가로의 꿈과 역량을 키워주는 학교</strong></p>
+            <p class="scontent">우리 한세사이버보안고등학교는 국가와 사회에 기여하는 수준 높은 인재를
+            배출함으로써 인류공영에 공헌함을 목적으로 하는 <strong>교육보세</strong>를 건학이념으로 합니다.</p>
+
+            <p class="scontent">본교는 군형 있는 사고와 창의력을 바탕으로 새로움을 개척하여 글로벌 시대에 부응하는 바른 인성
+            , 전문성, 글로벌 감각을 갖춘 창의적인 IT 전문 인재를 양성하고 있습니다.</p>
+
+            <p class="scontent">특히 서율특별시 교육청이 선정한 서울시의 유일한 '보안분야 특성화고등학교'로
+            현장 맞춤식 교육을 실시하여, <br>사회에서 요구하는 역량 있는 인재 육성으로 국가 발전에
+            노력하고 있습니다.</p>
+
+            <p class="scontent">학생들이 행복한 삶을 준비할 수 있도록 자율성과 책무성을 강화한 책임 경영을 실현하여
+            교원은 사랑과 책임을 다하여 가르치고, 학생은 열정과 즐거움으로 배우고, 학부모는
+            신뢰와 협력으로 꿈을 지지하는 학교를 가꾸어 나가겠습니다.</p>
+
+            <p class="scontent">모든 환경이 준비된 본교에서 여러분의 꿈을 세계로 미래로 실현할 수 있도록 문을 활짝 열고 기다리겠습니다.</p>
+
+            <p>감사합니다.</p>
+
+            <p>한세사이버보안고등학교장  강  혁  순</p>
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section id="post2" class="post">
+      <article class="post-title">
+        <p>학교상징</p>
+      </article>
+
+      <article class="post-style">
+        <p><img class="meanimg" src="./img/tree.png" alt="교목"></p>
+        <p><img class="meanimg" src="./img/flower.png" alt="교화"></p>
+        <p><img class="meanimg" src="./img/mark.png" alt="교표"></p>
+      </article>
+    </section>
+
+    <section id="post3" class="post">
+      <article class="post-title">
+        <p>선생님 소개</p>
+      </article>
+
+      <article class="post-style">
+        <p><img class="meanimg" src="./img/teachers.png" alt="선생님 소개"></p>
+      </article>
+    </section>
+
+    <section id="post4" class="post">
+      <article class="post-title">
+        <p>찾아오시는 길</p>
+      </article>
+
+      <article class="post-style">
+        <p><img class="meanimg" src="./img/2gil.png" alt="찾아오시는 길(2호선 아현역)"></p>
+        <p><img class="meanimg" src="./img/5gil.png" alt="찾아오시는 길(5호선 애오개역)"></p>
+      </article>
+
+    </section>
+  </section>
+
+
+  <footer></footer>
+
+  <script type="text/javascript">
+    $("header").load("header.html");
+    $("footer").load("footer.html");
+
+    function focusclick(num) {
+      var offset = $("#post" + num).offset().top - 70;
+      if (num == 1) {
+        $("body").animate({
+          scrollTop: 0
+        }, 400);
+      } else {
+        $("body").animate({
+          scrollTop: offset
+        }, 400);
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>

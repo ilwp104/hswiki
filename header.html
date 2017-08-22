@@ -1,0 +1,91 @@
+<ul id="menu-icons">
+  <a href="index.html">
+    <li class="menu-icon">
+      <img class="logo selogo" src="./img/hslogo.png">
+      <p class="menu-title">HSWIKI</p>
+    </li>
+  </a>
+  <a href="schoolinfo.html">
+    <li class="menu-icon">
+      <img class="logo" src="./img/school.png">
+      <p class="menu-title">학교소개</p>
+    </li>
+  </a>
+  <a href="depart.html">
+    <li class="menu-icon">
+      <img class="logo" src="./img/department.png">
+      <p class="menu-title">학과소개</p>
+    </li>
+  </a>
+  <a href="stuinfo.html">
+    <li class="menu-icon">
+      <img class="logo" src="./img/student.png">
+      <p class="menu-title">학생소개</p>
+    </li>
+  </a>
+  <a href="circles.php">
+    <li class="menu-icon">
+      <img class="logo" src="./img/circleicon.png">
+      <p class="menu-title">동아리소개</p>
+    </li>
+  </a>
+</ul>
+
+<!-- <script type="text/javascript">
+  $(function() {
+    var num = $(".logo").outerHeight(true);
+    var num2 = $(".menu-icon").outerHeight(true);
+    var menupos = $("#menu-icons").offset().top + num;
+    $(window).scroll(function() {
+      if ($(window).scrollTop() >= menupos) {
+        $("#menu-icons").css("position", "fixed");
+        $("#menu-icons").css("display", "inline");
+        $("#menu-icons").css("top", "-"+num+"px");
+        $("#menu-icons").css("left", "0");
+        $("#menu-icons").css("width", "100%");
+        $("#menu-icons").css("z-index", "99999999");
+        // $(".side-menu").css("position", "fixed");
+        // $(".side-menu").css("display", "inline");
+        $(".side-menu").css("top", "70px");
+        $(".wrap-post").css("margin-top", num2+"px");
+      } else {
+        $("#menu-icons").css("position", "relative");
+        $("#menu-icons").css("display", "");
+        $("#menu-icons").css("top", "");
+        // $("#menu-icons").css("width", "100%");
+        // $(".side-menu").css("position", "relative");
+        $(".side-menu").css("display", "");
+        $(".side-menu").css("top", "");
+        $(".wrap-post").css("margin-top", "0");
+      }
+    });
+  });
+</script> -->
+
+<script type="text/javascript">
+  $(function() {
+    var num = $(".logo").outerHeight(true);
+    var num2 = $(".menu-icon").outerHeight(true);
+    var menupos = $("#menu-icons").offset().top + num;
+    $(window).scroll(function() {
+      if ($(window).scrollTop() >= menupos) {
+        if ($(window).width() >= 780) {
+          $(".side-menu").css("position", "fixed");
+          $(".side-menu").css("top", 68 + "px");
+        }
+        $("#menu-icons").css("position", "fixed");
+        $("#menu-icons").css("top", "-" + num + "px");
+        // $("#menu-icons").css("left", "0");
+        $("#menu-icons").css("width", "100%");
+        $(".wrap-post").css("margin-top", num2 + "px");
+      } else {
+        $("#menu-icons").css("position", "relative");
+        $("#menu-icons").css("display", "");
+        $("#menu-icons").css("top", "");
+        $(".side-menu").css("position", "relative");
+        $(".side-menu").css("top", "");
+        $(".wrap-post").css("margin-top", "0");
+      }
+    });
+  });
+</script>

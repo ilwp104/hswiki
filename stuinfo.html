@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+
+<body>
+
+
+  <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/hswiki.css">
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+  <header></header>
+
+  <section class="wrap-post">
+
+    <nav class="side-menu">
+      <article class="side-title">
+        <p>학생소개</p>
+      </article>
+      <article class="post-style">
+        <p onclick="focusclick(1)">1학년</p>
+        <p onclick="focusclick(2)">2학년</p>
+        <p onclick="focusclick(3)">3학년</p>
+      </article>
+    </nav>
+
+    <section id="post1" class="post">
+      <article class="post-title">
+        <p>1학년</p>
+      </article>
+      <article class="post-style">
+        <div class="contents">
+          <ul class="wrap-stucontents">
+            <li class="gdepart stucontent">
+              <p class="scontitle">게임과</p>
+              <a class="inbu" href="stuclass.php?name=게임과&class=1학년1반&table=g11">1학년 1반</a>
+            </li>
+            <li class="udepart stucontent">
+              <p class="scontitle">유센과</p>
+              <a class="inbu" href="stuclass.php?name=유센과&class=1학년 1반&table=u11">1학년 1반</a>
+              <a class="inbu" href="stuclass.php?name=유센과&class=1학년 2반&table=u12">1학년 2반</a>
+            </li>
+            <li class="hdepart stucontent">
+              <p class="scontitle">해킹과</p>
+              <a class="inbu" href="stuclass.php?name=해킹과&class=1학년1반&table=h11">1학년 1반</a>
+              <a class="inbu" href="stuclass.php?name=해킹과&class=1학년2반&table=h12">1학년 2반</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section id="post2" class="post">
+      <article class="post-title">
+        <p>2학년</p>
+      </article>
+
+      <article class="post-style">
+        <div class="contents">
+          <ul class="wrap-stucontents">
+            <li class="gdepart stucontent">
+              <p class="scontitle">게임과</p>
+              <a class="inbu" href="stuclass.php?name=게임과&class=2학년1반&table=g21">2학년 1반</a>
+            </li>
+            <li class="udepart stucontent">
+              <p class="scontitle">유센과</p>
+              <a class="inbu" href="stuclass.php?name=유센과&class=2학년1반&table=u21">2학년 1반</a>
+              <a class="inbu" href="stuclass.php?name=유센과&class=2학년2반&table=u22">2학년 2반</a>
+            </li>
+            <li class="hdepart stucontent">
+              <p class="scontitle">해킹과</p>
+              <a class="inbu" href="stuclass.php?name=해킹과&class=2학년1반&table=h21">2학년 1반</a>
+              <a class="inbu" href="stuclass.php?name=해킹과&class=2학년2반&table=h22">2학년 2반</a>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section id="post3" class="post">
+      <article class="post-title">
+        <p>3학년</p>
+      </article>
+
+      <article class="post-style">
+        <div class="contents">
+          <ul class="wrap-stucontents">
+            <li class="gdepart stucontent">
+              <p class="scontitle">게임과</p>
+              <a class="inbu" href="stuclass.php?name=게임과&class=3학년1반&table=g31">3학년 1반</a>
+            </li>
+            <li class="udepart stucontent">
+              <p class="scontitle">유센과</p>
+              <a class="inbu" href="stuclass.php?name=유센과&class=3학년1반&table=u31">3학년 1반</a>
+              <a class="inbu" href="stuclass.php?name=유센과&class=3학년2반&table=u32">3학년 2반</a>
+            </li>
+            <li class="hdepart stucontent">
+              <p class="scontitle">해킹과</p>
+              <a class="inbu" href="stuclass.php?name=해킹과&class=3학년1반&table=h31">3학년 1반</a>
+              <a class="inbu" href="stuclass.php?name=해킹과&class=3학년2반&table=h32">3학년 2반</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </section>
+
+</form>
+  <footer></footer>
+
+  <script type="text/javascript">
+    $("header").load("header.html");
+    $("footer").load("footer.html");
+    var con=["g","u","h"];
+      for (var i = 0; i < 3; i++) {
+        $("."+con[i]+"-content1").fadeIn(500);
+        $("."+con[i]+"-content2").fadeIn(700);
+        $("."+con[i]+"-content3").fadeIn(900);
+        $("."+con[i]+"-content4").fadeIn(1100);
+      }
+    function focusclick(num) {
+      var offset = $("#post" + num).offset().top - 70;
+      if (num == 1) {
+        $("body").animate({
+          scrollTop: 0
+        }, 400);
+      } else {
+        $("body").animate({
+          scrollTop: offset
+        }, 400);
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>
