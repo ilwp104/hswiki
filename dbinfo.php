@@ -1,6 +1,6 @@
 <?php
   $hostname = "localhost";
   $username = "root";
-  $passwd = "kjh4981ok";
-  $dbname = "hswiki";
+  $passwd = "{password}";
+  $dbname = "{dbname}";
 ?>
